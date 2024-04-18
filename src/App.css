@@ -1,38 +1,85 @@
 .App {
-  text-align: center;
+	text-align: center;
+	font-size: larger;
+	font: 900;
+	color: white;
+	margin-top: 70px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.TodoForm {
+	display: flex;
+	width: 400px;
+	margin: auto;
+	height: 200px;
+	padding: 20px;
+	border-radius: 10px;
+	align-items: center;
+	margin-bottom: 10px;
+	background-color: rgb(255 255 255 / 30%);
+	backdrop-filter: blur(10px);
+
+	.todo-input {
+		width: 100%;
+		padding: 10px;
+		border: 1px solid #ccc;
+		border-radius: 10px;
+		margin-bottom: 10px;
+		margin-right: 10px;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	.todo-btn {
+		width: 30%;
+		padding: 10px;
+		border: 1px solid #ccc;
+		border-radius: 10px;
+		margin-bottom: 10px;
+		background-color: #4caf50;
+		color: white;
+		cursor: pointer;
+
+		&:hover {
+			background-color: #45a049;
+			transition: 200ms ease-in-out;
+		}
+	}
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Todo {
+	display: flex;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	align-items: center;
+	background-color: rgb(255 255 255 / 30%);
+	backdrop-filter: blur(10px);
+	margin-top: 10px;
+
+	> p {
+		cursor: pointer;
+	}
+
+	.ico {
+		margin-left: 40px;
+		color: white;
+		cursor: pointer;
+
+		&:hover {
+			color: rgb(224, 69, 69);
+		}
+	}
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.TodoWrapper {
+	display: flex;
+	flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.completed {
+	text-decoration: line-through;
+	color: rgb(179, 179, 179);
 }
